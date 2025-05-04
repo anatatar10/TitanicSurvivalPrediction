@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load model
 model = joblib.load('titanic_model.pkl')
 
 st.title("🛳️ Titanic Survival Prediction App")
 
-# Sidebar for user input
 st.sidebar.header("Enter Passenger Details")
 
 def user_input_features():
@@ -18,7 +16,6 @@ def user_input_features():
     Fare = st.sidebar.slider('Fare ($)', 0, 500, 32)
     Embarked = st.sidebar.selectbox('Port of Embarkation', ['S', 'C', 'Q'])
 
-    # Encode categorical values
     sex_encoded = 0 if Sex == 'male' else 1
     embarked_encoded = {'S': 2, 'C': 0, 'Q': 1}[Embarked]
 
