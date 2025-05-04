@@ -33,3 +33,21 @@ This project is a complete machine learning pipeline that predicts the survival 
 ```bash
 git clone https://github.com/anatatar10/TitanicSurvivalPrediction.git
 cd TitanicSurvivalPrediction
+```
+
+### 2. Set up Virtual Environment
+```bash
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the App
+```bash
+streamlit run app.py
+```
+
